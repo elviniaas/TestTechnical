@@ -13,4 +13,4 @@
 
 4. -
 - Membuat web course dengan 3 table 
-- Dikarenakan baru saja memulai belajar SQL dan belum pernah pegang PHP sebelumnya, saya mengosongkan nomor ini.
+- Dikarenakan baru saja memulai belajar SQL dan belum pernah memegang PHP sebelumnya, saya mengosongkan nomor ini.
