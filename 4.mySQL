@@ -1,0 +1,39 @@
+CREATE TABLE course (
+    id INT,
+    name VARCHAR(20),
+    thumbnail VARCHAR(50),
+    Id_author INT,
+    duration INT,
+    description VARCHAR(50),
+    PRIMARY KEY (id),
+    FOREIGN KEY (Id_author) REFERENCES author(id)
+);
+
+CREATE TABLE content (
+    id INT,
+    name VARCHAR(20),
+    video_link VARCHAR(100),
+    type VARCHAR(20),
+    id_course INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_course) REFERENCES course(id)
+);
+
+CREATE TABLE author (
+    id INT,
+    name VARCHAR(20),
+    PRIMARY KEY (id)
+);
+
+SELECT * FROM course;
+SELECT * FROM content;
+SELECT * FROM author;
+
+INSERT INTO author VALUES(1, 'Sam');
+INSERT INTO author VALUES(2, 'Kate');
+
+INSERT INTO course VALUES(1, 'Kimia', 'kimia.jpg', 1, 120, 'Kimia Basik');
+INSERT INTO course VALUES(2, 'Mat', 'mat.jpg', 2, 120, 'Mat Dasar');
+
+INSERT INTO content VALUES(1, 'Molekul', 'https://kimia.com', 'education', 1);
+INSERT INTO content VALUES(2, 'Pertambahan', 'https://mat.com', 'education', 2);
